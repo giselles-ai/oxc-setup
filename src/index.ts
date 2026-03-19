@@ -235,7 +235,7 @@ async function updateProjectPackageJson(packageJsonPath: string) {
   } & Record<string, JsonValue>;
 
   const nextScripts = {
-    ...(packageJson.scripts ?? {}),
+    ...packageJson.scripts,
     ...SCRIPT_UPDATES,
   };
 
